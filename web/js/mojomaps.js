@@ -1,6 +1,62 @@
+function getBaseLayerGD(entry){
+	baselayer={}
+	for (row in entry){
+		if(entry[row].title.$t=="baselayer"){
+			baselayer['layertype']=entry[row].title.$t
+			valuepairs=entry[row].content.$t.split(",")
+			$(valuepairs).each(function(){
+					key=$.trim(this.split(": ")[0]);
+					value=$.trim(this.split(": ")[1]);
+					baselayer[key]=value;
+			});
+		}
+	}
+	return baselayer
+}
 
 
+function getShapeLayersGD(entry){
+	shapelayers=[]
+	for (row in entry){
+		if(entry[row].title.$t=="shapelayer"){
+			shapelayer={}
+			shapelayer['layertype']=entry[row].title.$t
+			valuepairs=entry[row].content.$t.split(",")
+			$(valuepairs).each(function(){
+					key=$.trim(this.split(": ")[0]);
+					value=$.trim(this.split(": ")[1]);
+					shapelayer[key]=value;
+			});
+			shapelayers.push(shapelayer)
+		}
+	}
+	return shapelayers
+}
+function setMapLayersFromGoogleDoc(data){
+		map=mapdiv
+		entry=data.feed.entry
+		baselayer=getBaseLayerGD(entry)
+		shapelayers=getShapeLayersGD(entry)
+		if (baselayer.display=="TRUE"){
+			map=addBaseMapLayer(mapdiv,baselayer)
+		}
+		console.log(map)
+		$(shapelayers).each(function(){
+			console.log(this)
+			if(this.display=="TRUE"){
+				addShapeLayer(map,this.url)
+			}
+		});
+}
 
+
+function setupMojoMap(mapdiv,url,urltype="google"){
+	if (urltype=="google"){
+		$.getJSON(url,setMapLayersFromGoogleDoc)
+	}
+	
+	return map
+}
 		
 //Functions to get tile laters
 function getosmmap(){ //add a tile layer to add to our map, in this case it's the 'standard' OpenStreetMap.org tile server
@@ -35,11 +91,70 @@ function getTileLayer(maptype){
 
 
 
-function addExternalMapLayer(maplayer,maptype,lat,long,zoom){
+function addBaseMapLayer(mapdiv,basemaplayer){
 		//var mymap = L.map(maplayer).setView([25.509815,77.201317 ], 6);
-		var mymap = L.map(maplayer).setView([lat,long ], zoom);
+		var mymap = L.map(mapdiv).setView([basemaplayer.clat,basemaplayer.clong ], basemaplayer.zoom);
 		//Adding the selected tile layer
 		//tilelayer.addTo(mymap);
-		tilelayer=getTileLayer(maptype)
+		tilelayer=getTileLayer(basemaplayer.maptype)
 		mymap.addLayer(tilelayer);
+		return mymap
+}
+
+
+
+function addShapeLayer(map,featureCollection){
+	if(map==mapdiv){
+		var svg = d3.select(map).append("svg")
+		var g = svg.append("g")
+		d3.json(featureCollection, function(error, collection) {
+			var feature = g.selectAll("path")
+							.data(collection.features)
+							.enter().append("path")
+							.attr("id",function(d){console.log(d.properties);return d.properties.mojomapid});
+			
+		});
+	}
+	else{
+		var svg = d3.select(map.getPanes().overlayPane).append("svg")
+		var g = svg.append("g").attr("class", "leaflet-zoom-hide");
+	
+		d3.json(featureCollection, function(error, collection) {
+			
+			if (error) throw error;
+			var transform = d3.geoTransform({point: projectPoint}),
+				path = d3.geoPath().projection(transform);
+
+			var feature = g.selectAll("path")
+							.data(collection.features)
+							.enter().append("path")
+							.attr("id",function(d){console.log(d.properties);return d.properties.mojomapid});
+							
+			map.on("moveend", reset);
+			reset();
+			// Reposition the SVG to cover the features.
+			function reset() {
+				
+				var bounds = path.bounds(collection),
+					topLeft = bounds[0],
+					bottomRight = bounds[1];
+				svg.attr("width", bottomRight[0] - topLeft[0])
+					.attr("height", bottomRight[1] - topLeft[1])
+					.style("left", topLeft[0] + "px")
+					.style("top", topLeft[1] + "px");
+				g.attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
+				feature.attr("d", path);
+				
+			
+			}
+
+				// Use Leaflet to implement a D3 geometric transformation.
+			function projectPoint(x, y) {
+				var point = map.latLngToLayerPoint(new L.LatLng(y, x));
+				this.stream.point(point.x, point.y);
+			}
+				
+		});
+
+	}
 }

@@ -21,17 +21,26 @@
 	<!--Including our own stylesheet and script -->
 	<link rel="stylesheet" href="css/mojomaps.css">
 	<script src="js/mojomaps.js"></script>
+	<script src="js/mojomaps-data.js"></script>
 	
 	</head>
 	<body>
 		<div id="map"></div>
 		<script>
-			var maplayer="map"
-			var lat=25.509815
-			var lng=77.201317
-			var zoom=6
-			var maptype="osm"
-			//addExternalMapLayer(maplayer,maptype,lat,lng,zoom)
+			var mapdiv="map"
+			//var lat=25.509815
+			//var lng=77.201317
+			//var zoom=6
+			//var maptype="osm"
+			//map=addExternalMapLayer(maplayer,maptype,lat,lng,zoom)
+			spreadsheet="1m1Y27ctV6W74ZOVBtLVqgb_J_MlY_jzXE__PS0czQgg"
+			var url="https://spreadsheets.google.com/feeds/list/"+spreadsheet+"/od6/public/basic?alt=json"
+			setupMojoMap(mapdiv,url,urltype="google")
+			//getJSONFromGDURL(url)
+			//featureCollection="data/mojomaps-indiastates-fulldetail-withids.geojson"
+			//addDataLayer(map,featureCollection)
+			//featureCollection2="data/mojomaps-gangabasin-et-fulldetail-withids.geojson"
+			//addDataLayer(map,featureCollection2)
 			
 		</script>
 	</body>
