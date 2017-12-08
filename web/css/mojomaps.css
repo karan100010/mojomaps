@@ -1,0 +1,26 @@
+.popupGraph {
+			font: 11px arial, sans-serif;
+}	
+table, th, td {
+				border: 0px solid black;
+				font: 11px arial, sans-serif;
+				text-align: right;
+}
+.axis path,
+.axis line {
+		fill: none;
+		stroke: grey;
+		stroke-width: 1;
+		shape-rendering: crispEdges;
+}
+.bar {
+	fill: steelblue; 
+}
+.icon-div{
+		text-align: center;
+		font: 15px arial, sand-serif
+}
+#map { 
+		height: 1000px; 
+		width: 100%;
+}
