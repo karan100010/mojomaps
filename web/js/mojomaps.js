@@ -1,42 +1,30 @@
-function getBaseLayerGD(entry){
-	baselayer={}
-	for (row in entry){
-		if(entry[row].title.$t=="baselayer"){
-			baselayer['layertype']=entry[row].title.$t
-			valuepairs=entry[row].content.$t.split(",")
-			$(valuepairs).each(function(){
-					key=$.trim(this.split(": ")[0]);
-					value=$.trim(this.split(": ")[1]);
-					baselayer[key]=value;
-			});
+function getBaseLayerGD(data){
+	for (row in data){
+		if(data[row].layertype=="baselayer"){
+			baselayer=data[row]
+			
 		}
 	}
 	return baselayer
 }
 
-
-function getShapeLayersGD(entry){
+function getShapeLayersGD(data){
 	shapelayers=[]
-	for (row in entry){
-		if(entry[row].title.$t=="shapelayer"){
-			shapelayer={}
-			shapelayer['layertype']=entry[row].title.$t
-			valuepairs=entry[row].content.$t.split(",")
-			$(valuepairs).each(function(){
-					key=$.trim(this.split(": ")[0]);
-					value=$.trim(this.split(": ")[1]);
-					shapelayer[key]=value;
-			});
+	for (row in data){
+		if(data[row].layertype=="shapelayer"){
+			shapelayer=data[row]
 			shapelayers.push(shapelayer)
 		}
 	}
 	return shapelayers
 }
+
 function setMapLayersFromGoogleDoc(data){
 		map=mapdiv
-		entry=data.feed.entry
-		baselayer=getBaseLayerGD(entry)
-		shapelayers=getShapeLayersGD(entry)
+		
+		//entry=data.feed.entry
+		baselayer=getBaseLayerGD(data)
+		shapelayers=getShapeLayersGD(data)
 		if (baselayer.display=="TRUE"){
 			map=addBaseMapLayer(mapdiv,baselayer)
 		}
@@ -51,11 +39,13 @@ function setMapLayersFromGoogleDoc(data){
 
 
 function setupMojoMap(mapdiv,url,urltype="google"){
-	if (urltype=="google"){
-		$.getJSON(url,setMapLayersFromGoogleDoc)
-	}
 	
-	return map
+	
+	console.log(url)
+	Tabletop.init( { key: url,
+                   callback: setMapLayersFromGoogleDoc,
+                   simpleSheet: true } )
+
 }
 		
 //Functions to get tile laters
@@ -73,7 +63,7 @@ function getmapboxmap(){ //add a tile layer to add to our map, in this case it's
 		maxZoom: 18,
 		id: 'mapbox.streets',
 		accessToken: 'pk.eyJ1IjoiYXJqdW52ZW4iLCJhIjoiY2phN3ptODN4MDEzMTMybG8xM2t1bzltZCJ9.1HxRGkovlxUEqMNHlMmDmw'
-	})
+	});
 	return mapboxmap
 }
 		

@@ -20,6 +20,7 @@
 	
 	<!--Including our own stylesheet and script -->
 	<link rel="stylesheet" href="css/mojomaps.css">
+	<script src="js/tabletop.js"></script>
 	<script src="js/mojomaps.js"></script>
 	<script src="js/mojomaps-data.js"></script>
 	
@@ -28,8 +29,9 @@
 		<div id="map"></div>
 		<script>
 			var mapdiv="map"
-			spreadsheet="1m1Y27ctV6W74ZOVBtLVqgb_J_MlY_jzXE__PS0czQgg"
-			var url="https://spreadsheets.google.com/feeds/list/"+spreadsheet+"/od6/public/basic?alt=json"
+			sheetkey="1m1Y27ctV6W74ZOVBtLVqgb_J_MlY_jzXE__PS0czQgg"
+			var url="https://docs.google.com/spreadsheets/d/"+sheetkey+"/pubhtml"
+			//var url="https://spreadsheets.google.com/feeds/list/"+spreadsheet+"/od6/public/basic?alt=json"
 			setupMojoMap(mapdiv,url,urltype="google")
 		</script>
 	</body>
