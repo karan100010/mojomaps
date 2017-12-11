@@ -30,14 +30,10 @@ svg {
   position: relative;
 }
 
-path {
-  fill: #000;
+
+.shape {
+  fill: #f00;
   fill-opacity: .2;
   stroke: #fff;
   stroke-width: 1.5px;
-}
-
-path:hover {
-  fill: brown;
-  fill-opacity: .7;
 }

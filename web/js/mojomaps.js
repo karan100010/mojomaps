@@ -1,3 +1,41 @@
+//Function to set up the MojoMap
+function setupMojoMap(mapdiv,url,urltype="google"){
+	
+	
+	console.log("Setting up the mojomap...")
+	Tabletop.init( { key: url,
+                   callback: setMapLayersFromGoogleDoc,
+                   simpleSheet: true } )
+
+}
+
+
+//Get different types of layer from GoogleSheet Data
+function setMapLayersFromGoogleDoc(data){
+		console.log("Setting map layers from sheet")
+		map=mapdiv
+		baselayer=getBaseLayerGD(data)
+		shapelayers=getShapeLayersGD(data)
+		pointlayers=getPointLayersGD(data)
+		if (baselayer.display=="TRUE"){
+			map=addBaseMapLayer(mapdiv,baselayer)
+		}
+		$(shapelayers).each(function(){
+			if(this.display=="TRUE"){
+				addShapeLayer(map,this.url)
+			}
+		});
+		$(pointlayers).each(function(){
+			if(this.display=="TRUE"){
+				if (this.defaultmarker==""){
+					this.defaultmarker="images/mojomapicon.png"
+				}
+				addPointLayerURL(map,this.url,this.defaultmarker)
+			}
+		});
+}
+
+//Get the base layer
 function getBaseLayerGD(data){
 	for (row in data){
 		if(data[row].layertype=="baselayer"){
@@ -8,6 +46,8 @@ function getBaseLayerGD(data){
 	return baselayer
 }
 
+
+//Get all the shape layers
 function getShapeLayersGD(data){
 	shapelayers=[]
 	for (row in data){
@@ -19,81 +59,65 @@ function getShapeLayersGD(data){
 	return shapelayers
 }
 
-function setMapLayersFromGoogleDoc(data){
-		map=mapdiv
-		
-		//entry=data.feed.entry
-		baselayer=getBaseLayerGD(data)
-		shapelayers=getShapeLayersGD(data)
-		if (baselayer.display=="TRUE"){
-			map=addBaseMapLayer(mapdiv,baselayer)
+//Get all the points layers
+function getPointLayersGD(data){
+	pointlayers=[]
+	for (row in data){
+		if(data[row].layertype=="pointlayer"){
+			pointlayer=data[row]
+			pointlayers.push(pointlayer)
 		}
-		console.log(map)
-		$(shapelayers).each(function(){
-			console.log(this)
-			if(this.display=="TRUE"){
-				addShapeLayer(map,this.url)
-			}
-		});
-}
-
-
-function setupMojoMap(mapdiv,url,urltype="google"){
-	
-	
-	console.log(url)
-	Tabletop.init( { key: url,
-                   callback: setMapLayersFromGoogleDoc,
-                   simpleSheet: true } )
-
-}
-		
-//Functions to get tile laters
-function getosmmap(){ //add a tile layer to add to our map, in this case it's the 'standard' OpenStreetMap.org tile server
-		osmmap=L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-		maxZoom: 18
-	})
-	return osmmap
-}
-		
-function getmapboxmap(){ //add a tile layer to add to our map, in this case it's the MapBox tile server
-		mapboxmap=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-		maxZoom: 18,
-		id: 'mapbox.streets',
-		accessToken: 'pk.eyJ1IjoiYXJqdW52ZW4iLCJhIjoiY2phN3ptODN4MDEzMTMybG8xM2t1bzltZCJ9.1HxRGkovlxUEqMNHlMmDmw'
-	});
-	return mapboxmap
-}
-		
-//Selecting tile layer
-
-function getTileLayer(maptype){
-	if (maptype=="osm"){
-		tilelayer=getosmmap()
 	}
-	else if (maptype=="mapbox"){
-		tilelayer=getmapboxmap()
-	}
-	return tilelayer
+	return pointlayers
 }
 
 
-
+//Add the base layer to the map
 function addBaseMapLayer(mapdiv,basemaplayer){
-		//var mymap = L.map(maplayer).setView([25.509815,77.201317 ], 6);
 		var mymap = L.map(mapdiv).setView([basemaplayer.clat,basemaplayer.clong ], basemaplayer.zoom);
-		//Adding the selected tile layer
-		//tilelayer.addTo(mymap);
 		tilelayer=getTileLayer(basemaplayer.maptype)
 		mymap.addLayer(tilelayer);
 		return mymap
 }
 
 
+//Get the correct tile layer based on maptype
+function getTileLayer(maptype){
+	if (maptype=="osm"){
+		tilelayer=getosmmap()
+	}
+	else if (maptype=="mapbox"){
+		tilelayer=getmapboxmap('pk.eyJ1IjoiYXJqdW52ZW4iLCJhIjoiY2phN3ptODN4MDEzMTMybG8xM2t1bzltZCJ9.1HxRGkovlxUEqMNHlMmDmw')
+	}
+	return tilelayer
+}
 
+
+		
+//Functions to get tile laters
+function getosmmap(){ //add a tile layer to add to our map, in this case it's the 'standard' OpenStreetMap.org tile server
+	console.log("Getting OSM map log")
+	osmmap=L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+		maxZoom: 18
+	})
+	return osmmap
+}
+		
+function getmapboxmap(accesstoken){ //add a tile layer to add to our map, in this case it's the MapBox tile server
+	console.log("Getting mapbox tile layer")
+	mapboxmap=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		maxZoom: 18,
+		id: 'mapbox.streets',
+		accessToken: accesstoken
+	});
+	return mapboxmap
+}
+		
+//Functions to work with shape layers
 function addShapeLayer(map,featureCollection){
+	console.log("Adding Shape Layer")
 	if(map==mapdiv){
 		var svg = d3.select(map).append("svg")
 		var g = svg.append("g")
@@ -101,7 +125,7 @@ function addShapeLayer(map,featureCollection){
 			var feature = g.selectAll("path")
 							.data(collection.features)
 							.enter().append("path")
-							.attr("id",function(d){console.log(d.properties);return d.properties.mojomapid});
+							.attr("id",function(d){return d.properties.mojomapid});
 			
 		});
 	}
@@ -118,7 +142,8 @@ function addShapeLayer(map,featureCollection){
 			var feature = g.selectAll("path")
 							.data(collection.features)
 							.enter().append("path")
-							.attr("id",function(d){console.log(d.properties);return d.properties.mojomapid});
+							.attr("class", "shape")
+							.attr("id",function(d){return d.properties.mojomapid});
 							
 			map.on("moveend", reset);
 			reset();
@@ -147,4 +172,69 @@ function addShapeLayer(map,featureCollection){
 		});
 
 	}
+}
+
+
+//Functions to work with points layers
+
+
+//Get points datafrom sheet and add to map
+function addPointLayerURL(map,url,defaultmarker){
+	
+	Tabletop.init( { key: url,
+                   callback: function(data,tabletop){addPointLayer(map,defaultmarker,data,tabletop)},
+                   simpleSheet: true } )
+	
+	
+}
+
+
+
+
+//Add a point layer to the map
+function addPointLayer(map,defaultmarker,data,tabletop){	
+	console.log("Adding points layer")
+	featureCollection=getPointsAsGeoJson(data)
+	if(map==mapdiv){
+		//whattodoifnobaselayer
+		console.log(map)
+	}
+	else
+	{
+			markerlayer=L.geoJson(featureCollection, 
+			{
+				onEachFeature : function(feature,layer)
+								{
+									
+									
+									devicon=L.divIcon({
+												className : "icon-div",
+												html: '<img src="'+defaultmarker+'" style="height: 30;width: 30;"/>'
+												})
+									layer.setIcon(devicon)
+						
+								}
+				}).addTo(map)			
+			//console.log(map)	
+	}
+
+}
+
+
+//Convert points array from sheet into geojson
+function getPointsAsGeoJson(data){
+	points=[]
+	for (row in data){
+		template={
+					"geometry" : {
+						"type":"Point","coordinates":[]
+						},
+					"type" : "Feature",
+					"properties" : {}
+				}
+		template['properties']=data[row]
+		template['geometry']['coordinates']=[template['properties']['longitude'],template['properties']['latitude']]
+		points.push(template)
+	}
+	return points
 }
