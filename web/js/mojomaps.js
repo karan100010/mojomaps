@@ -118,6 +118,7 @@ function getmapboxmap(accesstoken){ //add a tile layer to add to our map, in thi
 //Functions to work with shape layers
 function addShapeLayer(map,featureCollection){
 	console.log("Adding Shape Layer")
+	console.log(featureCollection)
 	if(map==mapdiv){
 		var svg = d3.select(map).append("svg")
 		var g = svg.append("g")
