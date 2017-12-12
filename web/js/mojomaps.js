@@ -2,7 +2,7 @@
 function setupMojoMap(mapdiv,url,urltype="google"){
 	
 	
-	console.log("Setting up the mojomap...")
+	log("Setting up the mojomap...")
 	Tabletop.init( { key: url,
                    callback: setMapLayersFromGoogleDoc,
                    simpleSheet: true } )
@@ -12,7 +12,7 @@ function setupMojoMap(mapdiv,url,urltype="google"){
 
 //Get different types of layer from GoogleSheet Data
 function setMapLayersFromGoogleDoc(data){
-		console.log("Setting map layers from sheet")
+		log("Setting map layers from sheet")
 		map=mapdiv
 		baselayer=getBaseLayerGD(data)
 		shapelayers=getShapeLayersGD(data)
@@ -22,7 +22,7 @@ function setMapLayersFromGoogleDoc(data){
 		}
 		$(shapelayers).each(function(){
 			if(this.display=="TRUE"){
-				addShapeLayer(map,this.url)
+				addShapeLayer(map,this.url,this.layername)
 			}
 		});
 		$(pointlayers).each(function(){
@@ -30,7 +30,7 @@ function setMapLayersFromGoogleDoc(data){
 				if (this.defaultmarker==""){
 					this.defaultmarker="images/mojomapicon.png"
 				}
-				addPointLayerURL(map,this.url,this.defaultmarker)
+				addPointLayerURL(map,this.url,this.defaultmarker,this.layername)
 			}
 		});
 }
@@ -96,7 +96,7 @@ function getTileLayer(maptype){
 		
 //Functions to get tile laters
 function getosmmap(){ //add a tile layer to add to our map, in this case it's the 'standard' OpenStreetMap.org tile server
-	console.log("Getting OSM map log")
+	log("Getting OSM map log")
 	osmmap=L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
 		maxZoom: 18
@@ -105,7 +105,7 @@ function getosmmap(){ //add a tile layer to add to our map, in this case it's th
 }
 		
 function getmapboxmap(accesstoken){ //add a tile layer to add to our map, in this case it's the MapBox tile server
-	console.log("Getting mapbox tile layer")
+	log("Getting mapbox tile layer")
 	mapboxmap=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 		maxZoom: 18,
@@ -116,9 +116,8 @@ function getmapboxmap(accesstoken){ //add a tile layer to add to our map, in thi
 }
 		
 //Functions to work with shape layers
-function addShapeLayer(map,featureCollection){
-	console.log("Adding Shape Layer")
-	console.log(featureCollection)
+function addShapeLayer(map,featureCollection,layername){
+	log("Adding shape layer " + layername)
 	if(map==mapdiv){
 		var svg = d3.select(map).append("svg")
 		var g = svg.append("g")
@@ -180,8 +179,8 @@ function addShapeLayer(map,featureCollection){
 
 
 //Get points datafrom sheet and add to map
-function addPointLayerURL(map,url,defaultmarker){
-	
+function addPointLayerURL(map,url,defaultmarker,layername){
+	log("Adding points layer " + layername)
 	Tabletop.init( { key: url,
                    callback: function(data,tabletop){addPointLayer(map,defaultmarker,data,tabletop)},
                    simpleSheet: true } )
@@ -194,7 +193,6 @@ function addPointLayerURL(map,url,defaultmarker){
 
 //Add a point layer to the map
 function addPointLayer(map,defaultmarker,data,tabletop){	
-	console.log("Adding points layer")
 	featureCollection=getPointsAsGeoJson(data)
 	if(map==mapdiv){
 		//whattodoifnobaselayer
@@ -221,7 +219,6 @@ function addPointLayer(map,defaultmarker,data,tabletop){
 
 }
 
-
 //Convert points array from sheet into geojson
 function getPointsAsGeoJson(data){
 	points=[]
@@ -238,4 +235,10 @@ function getPointsAsGeoJson(data){
 		points.push(template)
 	}
 	return points
+}
+
+
+function log(message){
+	var logdiv = document.getElementById('log');
+	logdiv.innerHTML += "<br>"+ message;
 }
