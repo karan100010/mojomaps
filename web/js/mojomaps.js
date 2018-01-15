@@ -1,24 +1,38 @@
 //Function to set up the MojoMap
-function setupMojoMap(mapdiv,url,urltype="google"){
+//markerlayers=[]
+
+/*function setupMojoMap(mapdiv,url,urltype="google"){
 	
 	
 	log("Setting up the mojomap...")
 	Tabletop.init( { key: url,
                    callback: setMapLayersFromGoogleDoc,
                    simpleSheet: true } )
+   
+
+}*/
+function setupMojoMap(lmap,url,urltype="google"){
+	
+	//console.log(lmap)
+	log("Setting up the mojomap...")
+	Tabletop.init( { key: url,
+                   callback: function(data,tabletop){setMapLayersFromGoogleDoc(lmap,data,tabletop)},
+                   simpleSheet: true } )
+   
 
 }
 
-
 //Get different types of layer from GoogleSheet Data
-function setMapLayersFromGoogleDoc(data){
+function setMapLayersFromGoogleDoc(lmap,data,tabletop){
 		log("Setting map layers from sheet")
-		map=mapdiv
+		//console.log(lmap)	
+		map=lmap
 		baselayer=getBaseLayerGD(data)
 		shapelayers=getShapeLayersGD(data)
 		pointlayers=getPointLayersGD(data)
 		if (baselayer.display=="TRUE"){
-			map=addBaseMapLayer(mapdiv,baselayer)
+			//map=addBaseMapLayer(mapdiv,baselayer)
+			addBaseMapLayer(map,baselayer)
 		}
 		$(shapelayers).each(function(){
 			if(this.display=="TRUE"){
@@ -30,7 +44,7 @@ function setMapLayersFromGoogleDoc(data){
 				if (this.defaultmarker==""){
 					this.defaultmarker="images/mojomapicon.png"
 				}
-				addPointLayerURL(map,this.url,this.defaultmarker,this.layername)
+				addPointLayerURL(map,this.url,this.defaultmarker,this.layername,this.callbackfuncname)
 			}
 		});
 }
@@ -73,11 +87,11 @@ function getPointLayersGD(data){
 
 
 //Add the base layer to the map
-function addBaseMapLayer(mapdiv,basemaplayer){
-		var mymap = L.map(mapdiv).setView([basemaplayer.clat,basemaplayer.clong ], basemaplayer.zoom);
+function addBaseMapLayer(map,basemaplayer){
+		//var mymap = L.map(mapdiv).setView([basemaplayer.clat,basemaplayer.clong ], basemaplayer.zoom);
+		map.setView([basemaplayer.clat,basemaplayer.clong ], basemaplayer.zoom);
 		tilelayer=getTileLayer(basemaplayer.maptype)
-		mymap.addLayer(tilelayer);
-		return mymap
+		map.addLayer(tilelayer);
 }
 
 
@@ -179,10 +193,12 @@ function addShapeLayer(map,featureCollection,layername){
 
 
 //Get points datafrom sheet and add to map
-function addPointLayerURL(map,url,defaultmarker,layername){
+function addPointLayerURL(map,url,defaultmarker,layername,callbackfuncname="addPointLayer"){
 	log("Adding points layer " + layername)
+	
+	log("Calling function " + callbackfuncname)
 	Tabletop.init( { key: url,
-                   callback: function(data,tabletop){addPointLayer(map,defaultmarker,data,tabletop)},
+                   callback: function(data,tabletop){window[callbackfuncname](map,defaultmarker,data,tabletop)},
                    simpleSheet: true } )
 	
 	
@@ -193,6 +209,7 @@ function addPointLayerURL(map,url,defaultmarker,layername){
 
 //Add a point layer to the map
 function addPointLayer(map,defaultmarker,data,tabletop){	
+	
 	featureCollection=getPointsAsGeoJson(data)
 	if(map==mapdiv){
 		//whattodoifnobaselayer
@@ -205,17 +222,20 @@ function addPointLayer(map,defaultmarker,data,tabletop){
 				onEachFeature : function(feature,layer)
 								{
 									
-									
+									markers[feature['properties']['devname']]=layer
 									devicon=L.divIcon({
 												className : "icon-div",
 												html: '<img src="'+defaultmarker+'" style="height: 30;width: 30;"/>'
 												})
 									layer.setIcon(devicon)
+									//console.log(layer.id)
 						
 								}
 				}).addTo(map)			
 			//console.log(map)	
 	}
+	
+	return markerlayer
 
 }
 
