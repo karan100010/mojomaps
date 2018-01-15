@@ -195,7 +195,9 @@ function addShapeLayer(map,featureCollection,layername){
 //Get points datafrom sheet and add to map
 function addPointLayerURL(map,url,defaultmarker,layername,callbackfuncname="addPointLayer"){
 	log("Adding points layer " + layername)
-	
+	if (callbackfuncname==""){
+			callbackfuncname="addPointLayer"
+	}
 	log("Calling function " + callbackfuncname)
 	Tabletop.init( { key: url,
                    callback: function(data,tabletop){window[callbackfuncname](map,defaultmarker,data,tabletop)},
