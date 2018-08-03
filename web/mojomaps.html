@@ -34,8 +34,8 @@
 			var mapdiv="map"
 			sheetkey="1m1Y27ctV6W74ZOVBtLVqgb_J_MlY_jzXE__PS0czQgg"
 			var url="https://docs.google.com/spreadsheets/d/"+sheetkey+"/pubhtml"
-			//var url="https://spreadsheets.google.com/feeds/list/"+spreadsheet+"/od6/public/basic?alt=json"
-			setupMojoMap(mapdiv,url,urltype="google")
+			var mymap = L.map('map').setView([25.509815,77.201317 ], 6);
+        	setupMojoMap(mymap,url,urltype="google")
 		</script>
 	</body>
 </html>

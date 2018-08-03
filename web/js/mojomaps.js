@@ -11,22 +11,21 @@
    
 
 }*/
-function setupMojoMap(lmap,url,urltype="google"){
+function setupMojoMap(map,url,urltype="google"){
 	
 	//console.log(lmap)
 	log("Setting up the mojomap...")
 	Tabletop.init( { key: url,
-                   callback: function(data,tabletop){setMapLayersFromGoogleDoc(lmap,data,tabletop)},
+                   callback: function(data,tabletop){setMapLayersFromGoogleDoc(map,data,tabletop)},
                    simpleSheet: true } )
    
 
 }
 
 //Get different types of layer from GoogleSheet Data
-function setMapLayersFromGoogleDoc(lmap,data,tabletop){
+function setMapLayersFromGoogleDoc(map,data,tabletop){
 		log("Setting map layers from sheet")
 		//console.log(lmap)	
-		map=lmap
 		baselayer=getBaseLayerGD(data)
 		shapelayers=getShapeLayersGD(data)
 		pointlayers=getPointLayersGD(data)
