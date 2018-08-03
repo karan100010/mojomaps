@@ -36,7 +36,7 @@ function setMapLayersFromGoogleDoc(lmap,data,tabletop){
 		}
 		$(shapelayers).each(function(){
 			if(this.display=="TRUE"){
-				addShapeLayer(map,this.url,this.layername)
+				addShapeLayer(map,this.url,this.layername,this.style)
 			}
 		});
 		$(pointlayers).each(function(){
@@ -130,6 +130,7 @@ function getmapboxmap(accesstoken){ //add a tile layer to add to our map, in thi
 }
 		
 //Functions to work with shape layers
+/*
 function addShapeLayer(map,featureCollection,layername){
 	log("Adding shape layer " + layername)
 	if(map==mapdiv){
@@ -187,8 +188,36 @@ function addShapeLayer(map,featureCollection,layername){
 
 	}
 }
+*/
 
+function addShapeLayer(map,featureCollection,layername,style){
+	log("Adding shape layer " + layername)
+	
+	console.log(featureCollection)
+	
 
+	$.ajax({
+                  url: featureCollection,
+                  beforeSend: function(xhr){
+                    if (xhr.overrideMimeType)
+                    {
+                      xhr.overrideMimeType("application/json");
+                    }
+                  },
+                  dataType: 'json',
+                  data: null,
+                  success:  function(data, textStatus, request) {
+					  lstyle=JSON.parse(style)
+					  console.log(lstyle)
+                    L.geoJson(data, { style: lstyle
+						
+						}).addTo(map);
+                  }
+                }); 
+	
+	
+	
+}
 //Functions to work with points layers
 
 
