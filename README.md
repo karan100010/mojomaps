@@ -35,3 +35,6 @@ ______________________________
         |
         |_____mojomap.html (contains key to drive spreadsheet definition for map)
 ```
+
+Sample Mojomap spreadsheets
+https://drive.google.com/drive/u/1/folders/1sWy5x1nbcOXa9tUUI_ob8z7qVVqqRv3a
