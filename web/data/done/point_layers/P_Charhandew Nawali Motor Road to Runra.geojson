@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "P_Charhandew Nawali Motor Road to Runra",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "D-1", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.362, 29.67211666666666, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D-2", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.368933333333331, 29.672333333333331, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D-3", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.375054854041437, 29.668790769725511, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D-4", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.375733333333329, 29.667633333333331, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D-5", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.37896806838971, 29.663548441222119, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D-1-1", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.361789529493265, 29.671971641394119, 0.0 ] } }
+]
+}

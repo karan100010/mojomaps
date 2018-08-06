@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "P_Sosa to Sirkha",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Plantation", "description": "Sl_NO = 1<br>Name = Plantation<br>Long_ = 80.5637<br>Lat = 29.9023<br>P_Long = 80° 33' 49.20\" E<br>P_Lat = 29° 54' 08.20\" N<br>", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.563667, 29.902278, 0.0 ] } }
+]
+}

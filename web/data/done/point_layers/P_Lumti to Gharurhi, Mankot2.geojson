@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "P_Lumti to Gharurhi, Mankot2",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "D.Y-1", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.316624860729107, 29.894478054021612, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D.Y-2", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.314333333333337, 29.8954, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D.Y-3", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.313583333333327, 29.89843333333333, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D.Y-4", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.31313333333334, 29.9005, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D.Y-5", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.3083, 29.904766666666671, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D.Y-6", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.30825, 29.90845, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D.Y-7", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.310366666666667, 29.9135, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D.Y-8", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.309633333333338, 29.91465, 0.0 ] } }
+]
+}

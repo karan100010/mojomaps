@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "P_Syakuri to Khela",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": null, "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.580108333333328, 29.943227777777778, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": null, "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.574305555555554, 29.94220277777778, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": null, "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.575105555555552, 29.937552777777778, 0.0 ] } }
+]
+}

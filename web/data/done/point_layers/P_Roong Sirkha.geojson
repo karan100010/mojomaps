@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "P_Roong Sirkha",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Untitled Placemark", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.659383333333338, 29.994605555555552, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Untitled Placemark", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.662494444444448, 29.987611111111111, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Untitled Placemark", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.665377777777778, 29.986711111111109, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Untitled Placemark", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.663225, 29.992044444444449, 0.0 ] } }
+]
+}

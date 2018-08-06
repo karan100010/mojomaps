@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "P_C_Tamli-Garhmukteshwar",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Muck_Disposal", "description": "Muck_Disposal", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.294711111111113, 29.312413888888891, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Muck_Disposal", "description": "Muck_Disposal", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.29302777777778, 29.313213888888889, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Muck_Disposal", "description": "Muck_Disposal", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.294267287720913, 29.31132662757463, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Muck_Disposal", "description": "Muck_Disposal", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.287055555555554, 29.303219444444441, 0.0 ] } }
+]
+}

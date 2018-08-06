@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "points_Amtoda to Dungarpur",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "A", "description": "Muck_Disposal", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 79.721622222222223, 29.846469444444448, 0.0 ] } }
+]
+}

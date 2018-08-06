@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "C_Dhaun Bajaun_p",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Concurrent Campa Evaluation and Monitoring System", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 80.099621999973934, 29.234596999989751, 0.0 ], [ 80.096946999994884, 29.23617499998392, 0.0 ], [ 80.095972000018079, 29.234721999988022, 0.0 ], [ 80.097607999998971, 29.23371399999829, 0.0 ], [ 80.099621999973934, 29.234596999989751, 0.0 ] ] ] } }
+]
+}

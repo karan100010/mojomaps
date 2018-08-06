@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "P_Kathpatiya-Gudauli to Daula",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Untitled Placemark", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.27175, 29.686866666666671, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D.Y-2", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.274, 29.686466666666671, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D.Y-3", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.280566666666672, 29.68855, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "D.Y-4", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.282066666666665, 29.6892, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "CA", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.302076503542395, 29.697323259728972, 0.0 ] } }
+]
+}

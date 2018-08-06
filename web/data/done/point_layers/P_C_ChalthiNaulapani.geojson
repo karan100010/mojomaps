@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "P_C_ChalthiNaulapani",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "DUMP-1", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.070658852997397, 29.189376412884009, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "DUMP-2", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.062966226618201, 29.192007173193009, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "DUMP-4", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.043039195847285, 29.192923786573289, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Dump-5", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.049887652150119, 29.188932034456069, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "DUMP-3", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.050001783914297, 29.192288387578841, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Tree Plantation", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.07232757903256, 29.25799160920274, 0.0 ] } }
+]
+}

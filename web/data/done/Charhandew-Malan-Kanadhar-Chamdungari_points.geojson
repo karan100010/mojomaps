@@ -1,0 +1,16 @@
+{
+"type": "FeatureCollection",
+"name": "Charhandew-Malan-Kanadhar-Chamdungari_points2",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Dumping Zone", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null, "snippet": "" }, "geometry": { "type": "Point", "coordinates": [ 80.322283333333303, 29.67605, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Dumping Zone", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null, "snippet": "" }, "geometry": { "type": "Point", "coordinates": [ 80.32375, 29.676816666666699, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Dumping Zone", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null, "snippet": "" }, "geometry": { "type": "Point", "coordinates": [ 80.327783333333301, 29.6785833333333, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Dumping Zone", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null, "snippet": "" }, "geometry": { "type": "Point", "coordinates": [ 80.332416666666703, 29.678433333333299, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Dumping Zone", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null, "snippet": "" }, "geometry": { "type": "Point", "coordinates": [ 80.335683333333293, 29.680233333333302, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Dumping Zone", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null, "snippet": "" }, "geometry": { "type": "Point", "coordinates": [ 80.336416666666693, 29.6808333333333, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Dumping Zone", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null, "snippet": "" }, "geometry": { "type": "Point", "coordinates": [ 80.336833333333303, 29.683783333333299, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Dumping Zone", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null, "snippet": "" }, "geometry": { "type": "Point", "coordinates": [ 80.337983333333298, 29.6847833333333, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "CA", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null, "snippet": null }, "geometry": { "type": "Point", "coordinates": [ 80.339609265314351, 29.684330889028018, 0.0 ] } }
+]
+}

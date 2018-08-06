@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "P_C_Tamli2",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Muck Disposal", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": "absolute", "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.280225465081656, 29.25425502288153, -0.000000000708115 ] } },
+{ "type": "Feature", "properties": { "Name": "Muck Disposal", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": "absolute", "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.280753071706499, 29.269093248901228, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Muck Disposal", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": "absolute", "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.273008494115814, 29.271206822823771, -0.000000001416231 ] } },
+{ "type": "Feature", "properties": { "Name": "Muck Disposal", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.278753349833778, 29.283494879818271, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Muck Disposal", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.27871989971959, 29.278428958014619, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Muck Disposal", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.272871382638598, 29.27481392259142, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Muck Disposal", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.27469444, 29.26769444, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Muck Disposal", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": 0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 80.275947504054756, 29.256809725187431, 0.0 ] } }
+]
+}

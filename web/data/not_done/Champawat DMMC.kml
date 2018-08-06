@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Champawat DMMC.kml</name>
+	<Style id="geocode6">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<scale>0.8</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>00ffffff</color>
+		</LineStyle>
+	</Style>
+	<StyleMap id="geocode8">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#geocode6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#geocode3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="geocode3">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<scale>0.8</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>00ffffff</color>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>Champawat DMMC</name>
+		<visibility>0</visibility>
+		<Folder id="results">
+			<name>Nidil, Uttarakhand</name>
+			<visibility>0</visibility>
+			<Placemark id="1.2.1">
+				<name>Nidil</name>
+				<visibility>0</visibility>
+				<address>Uttarakhand 262524</address>
+				<snippet>Uttarakhand 262524</snippet>
+				<description><![CDATA[<!DOCTYPE html><html lang="en-IN"> <head> <style>body{font-family:Roboto,Arial,sans-serif}._qNc{background-color:#fafafa;border-radius:2px;bottom:2px;left:2px;position:absolute;right:2px;top:2px}._yNc{font-size:18px;font-weight:bold;line-height:25px;margin-bottom:5px}._pNc{font-size:14px;font-weight:300;line-height:18px;margin-bottom:5px}._vNc{font-size:16px;line-height:normal;color:#e7711b;margin-right:5px}.review-count{font-size:12px;line-height:normal}._wNc,._N8b,._M8b{display:inline-block;background-image:url('//maps.gstatic.com/tactile/omnibox/star-20130618.png');width:13px;height:13px;background-size:36px 12px}._N8b{background-position:-13px 0}._M8b{background-position:-25px 0}._rNc{font-size:12px;margin-bottom:2px}._tNc{font-size:14px;margin-bottom:2px}._CVi{font-size:14px;margin-bottom:2px;margin-top:5px}._DVi{font-size:14px;margin-bottom:2px;margin-top:5px}._xNc{font-size:14px;margin-bottom:2px;margin-top:5px}._i8c{font-size:14px;margin-bottom:2px}._mtd{font-size:14px;padding:6px 15px 2px;margin-bottom:5px}._uNc{overflow:hidden;display:inline-block;vertical-align:top;position:relative}._IGc{font-size:10px;font-style:italic}._EVi{font-weight:600}</style> <meta content="width=device-width, initial-scale=1" name="viewport"> </head> <body> <div class="_qNc"> <div class="_ltd"> <div class="_uNc"> <img alt="Nidil" src="https://www.google.com/earth/rpc/images/cleardot.gif" width="100%"> </div> </div> <br> <div> <span class="_yNc">Nidil</span>  <span class="_rNc"></span> </div> <div class="_pNc"> <div> Uttarakhand 262524 </div> </div> <div class="_CVi">   </div>  <div class="_xNc"></div> <br>  <div class="_i8c"></div> <div class="_DWd"> <a href="#" target="_blank">  </a> </div> <br>  <span class="reviews"> <a href="#" target="_blank"> <span class="review-count"></span></a> </span> <div class="_bpd">  </div> </div> </body> </html>]]></description>
+				<styleUrl>#geocode8</styleUrl>
+				<ExtendedData>
+					<Data name="placepageUri">
+						<value>https://www.google.com/earth/rpc/entity?lat=29.431946&amp;lng=80.23412705&amp;fid=0x39a122805aed02b9:0x3f4ff6cbde27bd73&amp;q=Nidil, Uttarakhand 262524&amp;hl=en&amp;gl=in&amp;client=earth-client&amp;cv=6.2.2.6613&amp;useragent=GoogleEarth/6.2.2.6613(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+					</Data>
+				</ExtendedData>
+				<MultiGeometry>
+					<Point>
+						<coordinates>80.2349196,29.4325989,0</coordinates>
+					</Point>
+					<LinearRing>
+						<coordinates>
+							80.22729822246639,29.42688286684979,0 80.22729822246639,29.43831493315021,0 80.24254097753361,29.43831493315021,0 80.24254097753361,29.42688286684979,0 80.22729822246639,29.42688286684979,0 
+						</coordinates>
+					</LinearRing>
+				</MultiGeometry>
+			</Placemark>
+		</Folder>
+		<Folder id="results">
+			<name>Maun Kanda, Uttarakhand</name>
+			<visibility>0</visibility>
+			<Placemark id="1.2.1">
+				<name>Maun Kanda</name>
+				<visibility>0</visibility>
+				<address>Uttarakhand 262528</address>
+				<snippet>Uttarakhand 262528</snippet>
+				<description><![CDATA[<!DOCTYPE html><html lang="en-IN"> <head> <style>body{font-family:Roboto,Arial,sans-serif}._qNc{background-color:#fafafa;border-radius:2px;bottom:2px;left:2px;position:absolute;right:2px;top:2px}._yNc{font-size:18px;font-weight:bold;line-height:25px;margin-bottom:5px}._pNc{font-size:14px;font-weight:300;line-height:18px;margin-bottom:5px}._vNc{font-size:16px;line-height:normal;color:#e7711b;margin-right:5px}.review-count{font-size:12px;line-height:normal}._wNc,._N8b,._M8b{display:inline-block;background-image:url('//maps.gstatic.com/tactile/omnibox/star-20130618.png');width:13px;height:13px;background-size:36px 12px}._N8b{background-position:-13px 0}._M8b{background-position:-25px 0}._rNc{font-size:12px;margin-bottom:2px}._tNc{font-size:14px;margin-bottom:2px}._CVi{font-size:14px;margin-bottom:2px;margin-top:5px}._DVi{font-size:14px;margin-bottom:2px;margin-top:5px}._xNc{font-size:14px;margin-bottom:2px;margin-top:5px}._i8c{font-size:14px;margin-bottom:2px}._mtd{font-size:14px;padding:6px 15px 2px;margin-bottom:5px}._uNc{overflow:hidden;display:inline-block;vertical-align:top;position:relative}._IGc{font-size:10px;font-style:italic}._EVi{font-weight:600}</style> <meta content="width=device-width, initial-scale=1" name="viewport"> </head> <body> <div class="_qNc"> <div class="_ltd"> <div class="_uNc"> <img alt="Maun Kanda" src="https://www.google.com/earth/rpc/images/cleardot.gif" width="100%"> </div> </div> <br> <div> <span class="_yNc">Maun Kanda</span>  <span class="_rNc"></span> </div> <div class="_pNc"> <div> Uttarakhand 262528 </div> </div> <div class="_CVi">   </div>  <div class="_xNc"></div> <br>  <div class="_i8c"></div> <div class="_DWd"> <a href="#" target="_blank">  </a> </div> <br>  <span class="reviews"> <a href="#" target="_blank"> <span class="review-count"></span></a> </span> <div class="_bpd">  </div> </div> </body> </html>]]></description>
+				<styleUrl>#geocode8</styleUrl>
+				<ExtendedData>
+					<Data name="placepageUri">
+						<value>https://www.google.com/earth/rpc/entity?lat=29.432865&amp;lng=79.99543495&amp;fid=0x39a0dde84f9d94e3:0xe1eea2155719892e&amp;q=Maun Kanda, Uttarakhand 262528&amp;hl=en&amp;gl=in&amp;client=earth-client&amp;cv=6.2.2.6613&amp;useragent=GoogleEarth/6.2.2.6613(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+					</Data>
+				</ExtendedData>
+				<MultiGeometry>
+					<Point>
+						<coordinates>79.9947956,29.4319243,0</coordinates>
+					</Point>
+					<LinearRing>
+						<coordinates>
+							79.97955297652906,29.4204923323968,0 79.97955297652906,29.4433562676032,0 80.01003822347094,29.4433562676032,0 80.01003822347094,29.4204923323968,0 79.97955297652906,29.4204923323968,0 
+						</coordinates>
+					</LinearRing>
+				</MultiGeometry>
+			</Placemark>
+		</Folder>
+		<Folder id="results">
+			<name>Kamajula Bus Station, Almora-Champawat Road, Kama Jyula, Uttarakhand</name>
+			<visibility>0</visibility>
+			<Placemark id="1.2.1">
+				<name>Kamajula Bus Station</name>
+				<visibility>0</visibility>
+				<address>Almora-Champawat Rd, Kama Jyula, Uttarakhand 262527</address>
+				<snippet>Almora-Champawat Rd, Kama Jyula, Uttarakhand 262527</snippet>
+				<description><![CDATA[<!DOCTYPE html><html lang="en-IN"> <head> <style>body{font-family:Roboto,Arial,sans-serif}._qNc{background-color:#fafafa;border-radius:2px;bottom:2px;left:2px;position:absolute;right:2px;top:2px}._yNc{font-size:18px;font-weight:bold;line-height:25px;margin-bottom:5px}._pNc{font-size:14px;font-weight:300;line-height:18px;margin-bottom:5px}._vNc{font-size:16px;line-height:normal;color:#e7711b;margin-right:5px}.review-count{font-size:12px;line-height:normal}._wNc,._N8b,._M8b{display:inline-block;background-image:url('//maps.gstatic.com/tactile/omnibox/star-20130618.png');width:13px;height:13px;background-size:36px 12px}._N8b{background-position:-13px 0}._M8b{background-position:-25px 0}._rNc{font-size:12px;margin-bottom:2px}._tNc{font-size:14px;margin-bottom:2px}._CVi{font-size:14px;margin-bottom:2px;margin-top:5px}._DVi{font-size:14px;margin-bottom:2px;margin-top:5px}._xNc{font-size:14px;margin-bottom:2px;margin-top:5px}._i8c{font-size:14px;margin-bottom:2px}._mtd{font-size:14px;padding:6px 15px 2px;margin-bottom:5px}._uNc{overflow:hidden;display:inline-block;vertical-align:top;position:relative}._IGc{font-size:10px;font-style:italic}._EVi{font-weight:600}</style> <meta content="width=device-width, initial-scale=1" name="viewport"> </head> <body> <div class="_qNc"> <div class="_ltd"> <div class="_uNc"> <img alt="Kamajula Bus Station" src="https://www.google.com/earth/rpc/images/cleardot.gif" width="100%"> </div> </div> <br> <div> <span class="_yNc">Kamajula Bus Station</span>  -  <span class="_rNc">Bus Station</span> </div> <div class="_pNc"> <div> Almora-Champawat Rd </div><div> Kama Jyula, Uttarakhand 262527 </div> </div> <div class="_CVi">   </div>  <div class="_xNc"></div> <br>  <div class="_i8c"></div> <div class="_DWd"> <a href="#" target="_blank">  </a> </div> <br>  <span class="reviews"> <a href="#" target="_blank"> <span class="review-count"></span></a> </span> <div class="_bpd">  </div> </div> </body> </html>]]></description>
+				<styleUrl>#geocode8</styleUrl>
+				<ExtendedData>
+					<Data name="placepageUri">
+						<value>https://www.google.com/earth/rpc/entity?lat=29.4777211&amp;lng=79.99489899999999&amp;fid=0x39a0dc3cffa3bd37:0xb18b2991cf654521&amp;q=Kamajula Bus Station, Almora-Champawat Rd, Kama Jyula, Uttarakhand 262527&amp;hl=en&amp;gl=in&amp;client=earth-client&amp;cv=6.2.2.6613&amp;useragent=GoogleEarth/6.2.2.6613(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+					</Data>
+				</ExtendedData>
+				<MultiGeometry>
+					<Point>
+						<coordinates>79.99489899999999,29.4777211,0</coordinates>
+					</Point>
+					<LinearRing>
+						<coordinates>
+							79.99109003295139,29.47486437471355,0 79.99109003295139,29.48057782528645,0 79.99870796704859,29.48057782528645,0 79.99870796704859,29.47486437471355,0 79.99109003295139,29.47486437471355,0 
+						</coordinates>
+					</LinearRing>
+				</MultiGeometry>
+			</Placemark>
+		</Folder>
+		<Folder id="results">
+			<name>Malla Gaon, Champawat, Uttarakhand</name>
+			<visibility>0</visibility>
+			<Placemark id="1.2.1">
+				<name>Mallagaon Cricket Stadium</name>
+				<visibility>0</visibility>
+				<address>Baraway, Uttarakhand 262530</address>
+				<snippet>Baraway, Uttarakhand 262530</snippet>
+				<description><![CDATA[<!DOCTYPE html><html lang="en-IN"> <head> <style>body{font-family:Roboto,Arial,sans-serif}._qNc{background-color:#fafafa;border-radius:2px;bottom:2px;left:2px;position:absolute;right:2px;top:2px}._yNc{font-size:18px;font-weight:bold;line-height:25px;margin-bottom:5px}._pNc{font-size:14px;font-weight:300;line-height:18px;margin-bottom:5px}._vNc{font-size:16px;line-height:normal;color:#e7711b;margin-right:5px}.review-count{font-size:12px;line-height:normal}._wNc,._N8b,._M8b{display:inline-block;background-image:url('//maps.gstatic.com/tactile/omnibox/star-20130618.png');width:13px;height:13px;background-size:36px 12px}._N8b{background-position:-13px 0}._M8b{background-position:-25px 0}._rNc{font-size:12px;margin-bottom:2px}._tNc{font-size:14px;margin-bottom:2px}._CVi{font-size:14px;margin-bottom:2px;margin-top:5px}._DVi{font-size:14px;margin-bottom:2px;margin-top:5px}._xNc{font-size:14px;margin-bottom:2px;margin-top:5px}._i8c{font-size:14px;margin-bottom:2px}._mtd{font-size:14px;padding:6px 15px 2px;margin-bottom:5px}._uNc{overflow:hidden;display:inline-block;vertical-align:top;position:relative}._IGc{font-size:10px;font-style:italic}._EVi{font-weight:600}</style> <meta content="width=device-width, initial-scale=1" name="viewport"> </head> <body> <div class="_qNc"> <div class="_ltd"> <div class="_uNc"> <img alt="Mallagaon Cricket Stadium" src="//lh3.googleusercontent.com/-E9wVEqYjNzE/WUjbGfAxwYI/AAAAAAAAGds/7gE7NroyWEohUJViP5X1heyPcSUH9qj_wCLIBGAYYCw/w408-h544-k-no" width="100%"> </div> </div> <br> <div> <span class="_yNc">Mallagaon Cricket Stadium</span>  -  <span class="_rNc">Cricket Ground</span> </div> <div class="_pNc"> <div> Baraway, Uttarakhand 262530 </div> </div> <div class="_CVi">   </div>  <div class="_xNc"></div> <br>  <div class="_i8c"></div> <div class="_DWd"> <a href="#" target="_blank">  </a> </div> <br>  <span class="_vNc">3.5</span>    <span class="_wNc"></span>    <span class="_wNc"></span>    <span class="_wNc"></span>   <span class="_N8b"></span>   <span class="_M8b"></span>     <span class="reviews"> <a href="http://www.google.com/search?q=Mallagaon+Cricket+Stadium,+Baraway,+Uttarakhand+262530&amp;ludocid=8877607374495099184#lrd=0x39a123704067347f:0x7b3398df1c2b2930,1" target="_blank"> <span class="review-count">2 reviews</span></a> </span> <div class="_bpd">  </div> </div> </body> </html>]]></description>
+				<styleUrl>#geocode8</styleUrl>
+				<ExtendedData>
+					<Data name="placepageUri">
+						<value>https://www.google.com/earth/rpc/entity?lat=29.5090649&amp;lng=80.2418095&amp;fid=0x39a123704067347f:0x7b3398df1c2b2930&amp;q=Mallagaon Cricket Stadium, Baraway, Uttarakhand 262530&amp;hl=en&amp;gl=in&amp;client=earth-client&amp;cv=6.2.2.6613&amp;useragent=GoogleEarth/6.2.2.6613(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+					</Data>
+				</ExtendedData>
+				<MultiGeometry>
+					<Point>
+						<coordinates>80.2418095,29.5090649,0</coordinates>
+					</Point>
+					<LinearRing>
+						<coordinates>
+							80.2380017063517,29.50620905476378,0 80.2380017063517,29.51192074523623,0 80.24561729364831,29.51192074523623,0 80.24561729364831,29.50620905476378,0 80.2380017063517,29.50620905476378,0 
+						</coordinates>
+					</LinearRing>
+				</MultiGeometry>
+			</Placemark>
+		</Folder>
+		<Folder id="results">
+			<name>Tari Gaon, Uttarakhand</name>
+			<visibility>0</visibility>
+			<Placemark id="1.2.1">
+				<name>Tari Gaon</name>
+				<visibility>0</visibility>
+				<address>Uttarakhand 262501</address>
+				<snippet>Uttarakhand 262501</snippet>
+				<description><![CDATA[<!DOCTYPE html><html lang="en-IN"> <head> <style>body{font-family:Roboto,Arial,sans-serif}._qNc{background-color:#fafafa;border-radius:2px;bottom:2px;left:2px;position:absolute;right:2px;top:2px}._yNc{font-size:18px;font-weight:bold;line-height:25px;margin-bottom:5px}._pNc{font-size:14px;font-weight:300;line-height:18px;margin-bottom:5px}._vNc{font-size:16px;line-height:normal;color:#e7711b;margin-right:5px}.review-count{font-size:12px;line-height:normal}._wNc,._N8b,._M8b{display:inline-block;background-image:url('//maps.gstatic.com/tactile/omnibox/star-20130618.png');width:13px;height:13px;background-size:36px 12px}._N8b{background-position:-13px 0}._M8b{background-position:-25px 0}._rNc{font-size:12px;margin-bottom:2px}._tNc{font-size:14px;margin-bottom:2px}._CVi{font-size:14px;margin-bottom:2px;margin-top:5px}._DVi{font-size:14px;margin-bottom:2px;margin-top:5px}._xNc{font-size:14px;margin-bottom:2px;margin-top:5px}._i8c{font-size:14px;margin-bottom:2px}._mtd{font-size:14px;padding:6px 15px 2px;margin-bottom:5px}._uNc{overflow:hidden;display:inline-block;vertical-align:top;position:relative}._IGc{font-size:10px;font-style:italic}._EVi{font-weight:600}</style> <meta content="width=device-width, initial-scale=1" name="viewport"> </head> <body> <div class="_qNc"> <div class="_ltd"> <div class="_uNc"> <img alt="Tari Gaon" src="https://www.google.com/earth/rpc/images/cleardot.gif" width="100%"> </div> </div> <br> <div> <span class="_yNc">Tari Gaon</span>  <span class="_rNc"></span> </div> <div class="_pNc"> <div> Uttarakhand 262501 </div> </div> <div class="_CVi">   </div>  <div class="_xNc"></div> <br>  <div class="_i8c"></div> <div class="_DWd"> <a href="#" target="_blank">  </a> </div> <br>  <span class="reviews"> <a href="#" target="_blank"> <span class="review-count"></span></a> </span> <div class="_bpd">  </div> </div> </body> </html>]]></description>
+				<styleUrl>#geocode8</styleUrl>
+				<ExtendedData>
+					<Data name="placepageUri">
+						<value>https://www.google.com/earth/rpc/entity?lat=29.607014999999993&amp;lng=80.21724499999999&amp;fid=0x39a1258930e63f53:0x6aab1fb45317a5b&amp;q=Tari Gaon, Uttarakhand 262501&amp;hl=en&amp;gl=in&amp;client=earth-client&amp;cv=6.2.2.6613&amp;useragent=GoogleEarth/6.2.2.6613(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+					</Data>
+				</ExtendedData>
+				<MultiGeometry>
+					<Point>
+						<coordinates>80.2167942,29.6078389,0</coordinates>
+					</Point>
+					<LinearRing>
+						<coordinates>
+							80.20918599306231,29.60213274479673,0 80.20918599306231,29.61354505520326,0 80.22440240693769,29.61354505520326,0 80.22440240693769,29.60213274479673,0 80.20918599306231,29.60213274479673,0 
+						</coordinates>
+					</LinearRing>
+				</MultiGeometry>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>
